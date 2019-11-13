@@ -1,3 +1,5 @@
+open Dolog
+  
 open Ctypes_of_clang
 
 module L = Log.Make(struct let section = "ppx" end)

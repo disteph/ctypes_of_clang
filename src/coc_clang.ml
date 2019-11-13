@@ -1,6 +1,8 @@
 (*external link_to_me : unit -> int = "link_to_me"
 let () = Printf.printf "%i\n" (link_to_me())*)
 
+open Dolog
+  
 module type Dllib = sig
   val from : Dl.library option
 end

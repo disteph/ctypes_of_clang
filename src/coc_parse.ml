@@ -1,3 +1,5 @@
+open Dolog
+  
 module L = Log.Make(struct let section = "parse" end)
 
 module Make(Clang : Coc_clang.S) = struct

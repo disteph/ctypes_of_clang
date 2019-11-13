@@ -1,3 +1,5 @@
+open Dolog
+  
 module L = Log.Make(struct let section = "gen" end)
 
 (* create ocaml compatible lower case identifier from C-ident. *)

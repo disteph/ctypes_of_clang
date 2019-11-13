@@ -1408,7 +1408,7 @@ module CXTypeKind = struct
     | RValueReference -> 104L
     | Record -> 105L
     | Enum -> 106L
-    | Typedef -> 107L
+    (* | Typedef -> 107L *)
     | ObjCInterface -> 108L
     | ObjCObjectPointer -> 109L
     | FunctionNoProto -> 110L
@@ -1420,6 +1420,7 @@ module CXTypeKind = struct
     | DependentSizedArray -> 116L
     | MemberPointer -> 117L
     | Auto -> 118L
+    | Typedef -> 119L
 
   let of_int64 = function
     | 0L -> Invalid
@@ -1471,7 +1472,8 @@ module CXTypeKind = struct
     | 116L -> DependentSizedArray
     | 117L -> MemberPointer
     | 118L -> Auto
-    | _ -> failwith "CXTypeKind.to_int"
+    | 119L -> Typedef
+    | x -> failwith ("CXTypeKind.to_int "^Int64.to_string x)
 
   let of_int x = of_int64 (Int64.of_int x)
 
